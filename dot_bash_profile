@@ -161,6 +161,11 @@ chruby ruby-3.4.4
 echo "bash $BASH_VERSION"
 source $HOME/.bashcommands.sh
 
+# Source .bashrc if it exists
+if [ -f "$HOME/.bashrc" ]; then
+  source "$HOME/.bashrc"
+fi
+
 # RVM
 # Mandatory loading of RVM into the shell
 # This must be the last line of your bash_profile always
