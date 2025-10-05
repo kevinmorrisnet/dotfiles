@@ -99,6 +99,7 @@ alias e='exit'
 alias repos='cd $REPOS'
 alias dev='cd $DEV'
 alias pi='cd $PI'
+alias blog='cd $BLOG'
 
 #K8S
 alias k='kubectl'
