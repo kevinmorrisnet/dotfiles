@@ -52,6 +52,7 @@ export EDITOR="vim"
 export REPOS="$HOME/Devops/Repos"
 export DEV="$HOME/Devops"
 export PI="$HOME/DevOps/Repos/pi-cluster"
+export BLOG="$HOME/DevOps/Repos/blog"
 
 #XDG
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
