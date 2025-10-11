@@ -35,4 +35,4 @@ import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 #shell = { program = "/opt/homebrew/bin/bash/", args = ["-l"] }
 
 [terminal]
-shell ={ program = "/opt/homebrew/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
+shell ={ program = "/usr/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
