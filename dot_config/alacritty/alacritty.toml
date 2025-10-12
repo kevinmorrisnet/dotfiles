@@ -35,10 +35,7 @@ program = "/opt/homebrew/bin/tmux"
 args = ["new", "-A", "-D", "-s", "main"]
 
 
-<<<<<<< HEAD
-=======
 #option_as_alt = "Both"
 
 [terminal]
 shell = { program = "/opt/homebrew/bin/bash/", args = ["-l"] }
->>>>>>> parent of ed56eee (tmux fix alacritty toml)
