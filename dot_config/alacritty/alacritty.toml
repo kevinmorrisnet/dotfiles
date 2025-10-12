@@ -28,5 +28,10 @@ x = 7
 y = 0
 
 [shell]
-program = "/usr/bin/tmux"
+#MAC
+program = "/opt/homebrew/bin/tmux"
+#LINUX
+# program = "/usr/bin/tmux"
 args = ["new", "-A", "-D", "-s", "main"]
+
+
