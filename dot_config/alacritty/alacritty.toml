@@ -1,6 +1,3 @@
-# themes from https://github.com/alacritty/alacritty-theme
-import = ["~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
-
 [env]
 TERM = "xterm-256color"
 
@@ -27,15 +24,15 @@ dimensions = { columns = 120, lines = 80 }
 x = 7
 y = 0
 
-[shell]
-#MAC
-program = "/opt/homebrew/bin/tmux"
-#LINUX
-# program = "/usr/bin/tmux"
-args = ["new", "-A", "-D", "-s", "main"]
+[general]
 
+# themes from https://github.com/alacritty/alacritty-theme
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 
 #option_as_alt = "Both"
 
+#[terminal]
+#shell = { program = "/opt/homebrew/bin/bash/", args = ["-l"] }
+
 [terminal]
-shell = { program = "/opt/homebrew/bin/bash/", args = ["-l"] }
+shell ={ program = "/opt/homebrew/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
