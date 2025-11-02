@@ -35,5 +35,9 @@ y = 0
 #args = ["new", "-A", "-D", "-s", "main"]
 
 #Linux
-program = "/usr/bin/tmux"
-args = ["new", "-A", "-D", "-s", "main"]
+#program = "/usr/bin/tmux"
+#args = ["new", "-A", "-D", "-s", "main"]
+
+[terminal]
+shell ={ program = "/opt/homebrew/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
+
