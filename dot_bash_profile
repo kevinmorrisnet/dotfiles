@@ -53,6 +53,9 @@ export REPOS="$HOME/Devops/Repos"
 export DEV="$HOME/Devops"
 export PI="$HOME/DevOps/Repos/pi-cluster"
 export BLOG="$HOME/DevOps/Repos/blog"
+export HOMELAB="$HOME/DevOps/Repos/homelab"
+export GITHUB="$HOME/Devops/Repos/github"
+
 
 #XDG
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
@@ -100,6 +103,9 @@ alias repos='cd $REPOS'
 alias dev='cd $DEV'
 alias pi='cd $PI'
 alias blog='cd $BLOG'
+alias home='cd $HOMELAB'
+alias github='cd $GITHUB'
+
 
 #K8S
 alias k='kubectl'
