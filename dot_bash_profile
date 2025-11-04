@@ -1,10 +1,3 @@
-# Configuring Our Prompt
-# ======================
-
-# if you install git via homebrew, or install the bash autocompletion via homebrew, you get __git_ps1 which you can use in the PS1
-# to display the git branch.  it's supposedly a bit faster and cleaner than manually parsing through sed. i dont' know if you care
-# enough to change it
-
 # This function is called in your prompt to output your active git branch.
 function parse_git_branch {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -26,11 +19,6 @@ function prompt {
 prompt
 
 # Environment Variables
-# =====================
-# Library Paths
-# These variables tell your shell where they can find certain
-# required libraries so other programs can reliably call the variable name
-# instead of a hardcoded path.
 
 # NODE_PATH
 # Node Path from Homebrew I believe
@@ -49,44 +37,22 @@ export GIT_EDITOR="vim"
 export EDITOR="vim"
 
 #directories
-export REPOS="$HOME/Devops/Repos"
 export DEV="$HOME/Devops"
-export PI="$HOME/DevOps/Repos/pi-cluster"
-export BLOG="$HOME/DevOps/Repos/blog"
-export HOMELAB="$HOME/DevOps/Repos/homelab"
+export REPOS="$HOME/Devops/Repos"
+export PI="$HOME/DevOps/Repos/github/pi-cluster"
+export BLOG="$HOME/DevOps/Repos/github/blog"
+export HOMELAB="$HOME/DevOps/Repos/github/homelab"
 export GITHUB="$HOME/Devops/Repos/github"
-
 
 #XDG
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
 # Paths
-
-# The USR_PATHS variable will just store all relevant /usr paths for easier usage
-# Each path is seperate via a : and we always use absolute paths.
-
-# A bit about the /usr directory
-# The /usr directory is a convention from linux that creates a common place to put
-# files and executables that the entire system needs access too. It tries to be user
-# independent, so whichever user is logged in should have permissions to the /usr directory.
-# We call that /usr/local. Within /usr/local, there is a bin directory for actually
-# storing the binaries (programs) that our system would want.
-# Also, Homebrew adopts this convetion so things installed via Homebrew
-# get symlinked into /usr/local
 export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:"
-
-# Hint: You can interpolate a variable into a string by using the $VARIABLE notation as below.
-
-# We build our final PATH by combining the variables defined above
-# along with any previous values in the PATH variable.
-
-# Our PATH variable is special and very important. Whenever we type a command into our shell,
-# it will try to find that command within a directory that is defined in our PATH.
-# Read http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/ for more on that.
 export PATH="$USR_PATHS:$PATH"
 
 # Aliases
-# =====================
+
 # ls
 alias ls='ls --color=auto'
 alias ll='ls -la'
@@ -106,7 +72,6 @@ alias blog='cd $BLOG'
 alias home='cd $HOMELAB'
 alias github='cd $GITHUB'
 
-
 #K8S
 alias k='kubectl'
 alias kgp='kubectl get pods'
@@ -114,6 +79,7 @@ alias kga='kubectl get all'
 
 #Flux
 alias fgk='flux get kustomizations'
+alias frk='flux reconcile kustomizations'
 
 # Git
 alias gcl="git clone"
@@ -139,7 +105,7 @@ bind "set completion-ignore-case on"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/kmorris/.rd/bin:$PATH"
+#export PATH="/Users/kmorris/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT
 
 ### To add Homebrew to your PATH, add to your shell profile (e.g. ~/.bash_profile or ~/.zprofile):
