@@ -29,12 +29,10 @@ export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 export GIT_MERGE_AUTOEDIT='no'
 
 # Editors
-# Tells your shell that when a program requires various editors, use sublime.
-# The -w flag tells your shell to wait until sublime exits
-export VISUAL="vim"
-export SVN_EDITOR="vim"
-export GIT_EDITOR="vim"
-export EDITOR="vim"
+export VISUAL="nvim"
+export SVN_EDITOR="nvim"
+export GIT_EDITOR="nvim"
+export EDITOR="nvim"
 
 #directories
 export DEV="$HOME/Devops"
@@ -60,7 +58,7 @@ alias la='ls -lah'
 
 #CLI
 alias c='clear'
-alias v='vim'
+alias v='nvim'
 alias t='tmux'
 alias e='exit'
 
