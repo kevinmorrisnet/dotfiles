@@ -7,12 +7,12 @@ function parse_git_branch {
 function prompt {
 
   #Define a variable to reset the text color
-  local   RESET="\[\e[0m\]"
+  local RESET="\[\e[0m\]"
 
   # Here is where we actually export the PS1 Variable which stores the text for your prompt
- export PS1="\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;34m\]\h\[\e[0m\]:\[\e[0;35m\]\w\[\e[0m\]\[\e[0;32m\]\$(parse_git_branch)\[\e[0m\]\n\$"
- PS2='> '
- PS4='+ '
+  export PS1="\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;34m\]\h\[\e[0m\]:\[\e[0;35m\]\w\[\e[0m\]\[\e[0;32m\]\$(parse_git_branch)\[\e[0m\]\n\$"
+  PS2='> '
+  PS4='+ '
 }
 
 # Finally call the function and our prompt is all pretty
@@ -41,6 +41,7 @@ export PI="$HOME/DevOps/Repos/github/pi-cluster"
 export BLOG="$HOME/DevOps/Repos/github/blog"
 export HOMELAB="$HOME/DevOps/Repos/github/homelab"
 export GITHUB="$HOME/Devops/Repos/github"
+export SECONDBRAIN="$HOME/Obsidian/second-brain"
 
 #XDG
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
@@ -69,6 +70,7 @@ alias pi='cd $PI'
 alias blog='cd $BLOG'
 alias home='cd $HOMELAB'
 alias github='cd $GITHUB'
+alias sb='cd $SECONDBRAIN'
 
 #K8S
 alias k='kubectl'
