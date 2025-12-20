@@ -30,7 +30,7 @@ y = 0
 
 [terminal]
 #mac
-shell ={ program = "/opt/homebrew/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
+#shell ={ program = "/opt/homebrew/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
 
 #linux
-#shell ={ program = "/usr/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
+shell = { program = "/usr/bin/tmux", args = ["new", "-A", "-D", "-s", "main"] }
